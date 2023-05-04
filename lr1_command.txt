@@ -1,0 +1,81 @@
+1)
+
+CREATE TABLE controller
+(
+    Id SERIAL PRIMARY KEY,
+    Login CHARACTER VARYING(255),
+    Password CHARACTER VARYING(255),
+    FirstName CHARACTER VARYING(255),
+    LastName CHARACTER VARYING(255),
+    Patronimic CHARACTER VARYING(255)
+);
+
+CREATE TABLE event
+(
+    Id SERIAL PRIMARY KEY,
+    EndedAt DATE,
+    StartedAt DATE
+);
+
+CREATE TABLE location
+(
+    Id SERIAL PRIMARY KEY,
+    Name CHARACTER VARYING(255),
+    Address CHARACTER VARYING(255),
+    Coordinates CHARACTER VARYING(255)
+);
+
+CREATE TABLE photo
+(
+    Id SERIAL PRIMARY KEY,
+    Url CHARACTER VARYING(255)
+);
+
+CREATE TABLE report
+(
+    Id SERIAL PRIMARY KEY,
+    Status INTEGER,
+    CreatedAt DATE,
+    Coordinates CHARACTER VARYING(255),
+    Rating INTEGER,
+    Comment CHARACTER VARYING(255),
+    CommentAdmin CHARACTER VARYING(255)
+);
+
+2)
+
+INSERT INTO photo (Url)
+VALUES ('test1'), ('test2');
+
+INSERT INTO controller (Login, Password, FirstName, LastName, Patronimic)
+VALUES ('ivan', 'ivan1', 'Иван', 'Иванов', 'Иванович'),
+       ('petr', 'petr1', 'Петр', 'Петров', 'Петрович'),
+       ('vasya', 'vasya1', 'Вася', 'Васечкин', 'Васильевич');
+       
+       INSERT INTO event (EndedAt, StartedAt)
+VALUES ('2023-11-20', '2023-11-01'),
+       ('2023-11-01', '2022-10-20');
+       
+3)
+
+SELECT * FROM controller;
+
+SELECT FirstName FROM controller;
+
+4)
+
+SELECT * FROM controller INNER JOIN event USING (Id);
+
+SELECT * FROM controller CROSS JOIN event;
+
+5) 
+
+UPDATE controller SET FirstName = 'НовыйИван' WHERE FirstName = 'Иван';
+
+UPDATE controller SET FirstName = 'Иван' WHERE FirstName = 'НовыйИван';
+
+6) 
+
+DELETE FROM controller WHERE FirstName = 'Иван';
+
+DELETE FROM event WHERE StartedAt = '2022-10-20';
