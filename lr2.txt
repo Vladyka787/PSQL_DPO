@@ -1,0 +1,47 @@
+DROP TABLE lab2
+
+CREATE TYPE schitalocka AS ENUM ('eniki', 'beniki', 'eli', 'vareniki');
+
+CREATE TYPE sostav AS {
+    chisl int,
+    simvol varchar
+};
+
+CREATE TABLE lab2
+(
+    chisl int,
+    simvol varchar,
+    logic boolean,
+    dateTime timestamp,
+    perechisl schitalocka,
+    massiv int[],
+    xmlZnach xml,
+    jsonZnach json,
+    sostavZnach sostav,
+    dengi money,
+    byteZnach bytea,
+    geometric point,
+    bitZnach bit(3),
+    uuidZnach uuid
+)
+
+INSERT INTO lab2 (chisl, simvol, logic, dateTime, perechisl, massiv, xmlZnach, jsonZnach, sostavZnach, dengi, byteZnach, geometric, bitZnach, uuidZnach)
+VALUES ('42', 'sorocDva', 'true', '1999-01-08 04:05:06', 'beniki', '{1,2,3}', '<foo>bar</foo>', '{"bar": "baz", "balance": 7.77, "active":false}', ROW('42', 'sorocDva'), '42.42', E'\\000', '(42,42)', B'101', gen_random_uuid());
+
+
+SELECT * FROM lab2
+WHERE 
+chisl = '42' AND 
+simvol = 'sorocDva' AND 
+logic = 'true' AND 
+dateTime = '1999-01-08 04:05:06' AND 
+perechisl = 'beniki' AND 
+massiv = '{1,2,3}' AND 
+dengi = '42.42' AND 
+byteZnach = E'\\000' AND 
+bitZnach = B'101' AND 
+uuidZnach = 'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11' AND 
+byteZnach = E'\\000'::bytea AND
+xmlZnach IS DOCUMENT AND
+jsonZnach->> 'bar' = 'baz' AND
+(sostavZnach).chisl = '42'
