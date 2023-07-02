@@ -1,0 +1,676 @@
+INSERT INTO public.customer(id, created_at, first_name, last_name, phone, email)
+VALUES 
+    (1, '1990-05-10 10:00:00', 'Владимир', 'Иванов', '+78005553535', 'test1@mail.ru'),
+    (2, '1990-05-12 10:00:00', 'Петр', 'Крылов', '+78005553536', 'test2@mail.ru'),
+    (3, '1990-05-13 10:00:00', 'Иван', 'Усачев', '+78005553537', 'test3@mail.ru'),
+    (4, '1990-05-14 10:00:00', 'Ирина', 'Маслова', '+78005553538', 'test4@mail.ru'),
+    (5, '1990-05-15 10:00:00', 'Сергей', 'Небов', '+78005553539', 'test5@mail.ru'),
+    (6, '1990-05-16 10:00:00', 'Катя', 'Кремнева', '+78005553540', NULL),
+    (7, '1990-05-17 10:00:00', 'Женя', 'Воробьев', '+78005553541', NULL);
+
+INSERT INTO
+    public.status(id, name)
+VALUES
+    (1, 'Создан'),
+    (2, 'Оформлен'),
+    (3, 'Собран'),
+    (4, 'В пути'),
+    (5, 'Доставлен'),
+    (6, 'Отменен'),
+    (7, 'Выполнен');
+    
+    INSERT INTO public."order"(id, created_at, customer_id, manager_id, status_id, is_paid, total_sum, utm_source)
+VALUES
+(1, '2022-11-27 05:13:58', 1, 10, 3, 'true', 62676, 'autem'),
+(2, '2023-09-21 02:23:40', 4, 17, 3, 'true', 12929, 'ipsam'),
+(3, '2019-12-04 17:23:22', 2, 18, 3, 'false', 55419, 'consequatur'),
+(4, '2020-05-09 00:25:33', 4, 2, 2, 'true', 57328, 'sunt'),
+(5, '2021-07-26 23:39:16', 6, 4, 4, 'true', 39655, 'sed'),
+(6, '2020-05-23 05:32:38', 6, 6, 4, 'true', 17277, 'tempora'),
+(7, '2022-05-18 23:39:18', 6, 14, 7, 'true', 94691, 'velit'),
+(8, '2024-05-25 07:38:11', 7, 17, 1, 'true', 12995, 'sed'),
+(9, '2023-01-26 05:24:24', 7, 13, 5, 'true', 76292, 'esse'),
+(10, '2022-12-17 22:50:57', 3, 7, 7, 'true', 18300, 'eos'),
+(11, '2022-02-15 00:17:46', 5, 18, 7, 'true', 7466, 'eos'),
+(12, '2020-12-28 06:34:23', 7, 6, 1, 'true', 58271, 'quam'),
+(13, '2021-06-13 02:22:52', 4, 7, 1, 'true', 82969, 'necessitatibus'),
+(14, '2021-09-29 02:18:35', 6, 15, 2, 'true', 8511, 'qoeprm'),
+(15, '2021-06-22 23:04:01', 5, 2, 1, 'true', 88372, 'eos'),
+(16, '2024-02-07 08:39:24', 6, 18, 6, 'false', 51831, 'earum'),
+(17, '2019-09-24 17:41:08', 1, 19, 6, 'false', 14311, 'velit'),
+(18, '2020-11-15 08:57:11', 7, 12, 1, 'false', 32693, 'est'),
+(19, '2021-05-23 06:08:08', 7, 8, 7, 'true', 65095, 'earum'),
+(20, '2023-09-21 08:41:22', 7, 4, 1, 'false', 36622, 'quibusdam'),
+(21, '2020-04-24 10:48:57', 7, 3, 1, 'false', 10875, 'esse'),
+(22, '2022-03-10 11:37:39', 1, 11, 6, 'true', 32509, 'autem'),
+(23, '2024-05-27 16:56:01', 4, 17, 6, 'true', 48889, 'sed'),
+(24, '2024-03-12 19:43:08', 4, 8, 7, 'true', 61306, 'minima'),
+(25, '2021-07-07 13:31:42', 7, 16, 1, 'true', 45469, 'nam'),
+(26, '2020-04-07 16:19:49', 1, 15, 3, 'false', 63289, 'necessitatibus'),
+(27, '2019-05-13 19:53:39', 1, 18, 6, 'false', 13845, 'earum'),
+(28, '2019-11-07 19:17:15', 3, 12, 7, 'true', 49977, 'earum'),
+(29, '2023-05-28 12:21:15', 2, 19, 4, 'true', 24717, 'amet'),
+(30, '2022-03-23 21:51:32', 5, 1, 3, 'true', 28146, 'ipsa'),
+(31, '2024-03-22 15:06:03', 6, 11, 6, 'false', 60033, 'necessitatibus'),
+(32, '2019-08-01 16:00:24', 7, 9, 1, 'false', 21613, 'est'),
+(33, '2020-11-05 12:36:03', 5, 10, 5, 'true', 14230, 'quibusdam'),
+(34, '2023-09-15 22:16:14', 2, 19, 6, 'true', 24560, 'amet'),
+(35, '2023-06-02 04:02:16', 7, 20, 3, 'false', 80765, 'velit'),
+(36, '2021-10-21 10:19:15', 1, 18, 5, 'true', 1612, 'quas'),
+(37, '2021-09-13 22:44:50', 7, 14, 6, 'false', 33622, 'minima'),
+(38, '2021-06-08 14:08:59', 2, 15, 1, 'true', 13455, 'porro'),
+(39, '2024-04-15 13:38:18', 6, 17, 7, 'true', 37671, 'quam'),
+(40, '2023-08-23 07:01:10', 3, 8, 5, 'true', 48593, 'enim'),
+(41, '2023-08-15 08:54:10', 4, 11, 1, 'true', 67867, 'porro'),
+(42, '2020-11-05 14:01:20', 2, 11, 3, 'false', 17217, 'consequatur'),
+(43, '2022-03-04 22:41:41', 3, 2, 1, 'true', 52565, 'quas'),
+(44, '2022-07-03 06:29:52', 2, 11, 1, 'true', 72642, 'necessitatibus'),
+(45, '2020-01-16 02:46:08', 5, 4, 6, 'true', 86988, 'enim'),
+(46, '2024-04-10 04:50:27', 1, 16, 4, 'true', 78084, 'quibusdam'),
+(47, '2022-07-21 01:56:54', 6, 7, 4, 'false', 55528, 'quam'),
+(48, '2021-02-01 07:32:05', 4, 5, 4, 'true', 83681, 'nam'),
+(49, '2021-10-03 21:43:25', 5, 20, 1, 'true', 1844, 'enim'),
+(50, '2020-07-03 21:16:08', 3, 18, 7, 'true', 212, 'autem'),
+(51, '2022-02-21 14:27:01', 6, 14, 1, 'true', 14753, 'necessitatibus'),
+(52, '2023-06-08 23:56:37', 2, 9, 6, 'false', 74699, 'tempora'),
+(53, '2020-10-19 12:29:03', 3, 14, 5, 'true', 66496, 'sunt'),
+(54, '2021-05-29 18:36:22', 6, 18, 7, 'true', 90520, 'sed'),
+(55, '2023-02-26 14:21:08', 3, 14, 7, 'true', 73853, 'enim'),
+(56, '2022-03-01 00:05:46', 4, 6, 7, 'true', 49679, 'nostrum'),
+(57, '2020-07-28 08:24:53', 4, 13, 3, 'true', 20320, 'nisi'),
+(58, '2024-01-31 14:48:15', 1, 14, 7, 'true', 84110, 'qoeprm'),
+(59, '2023-09-14 20:44:11', 6, 9, 1, 'true', 74718, 'minima'),
+(60, '2022-02-24 13:47:53', 3, 6, 6, 'false', 73362, 'enim');
+
+
+INSERT INTO public.order_history(id, order_id, created_at, field_name, old_value, new_value)
+VALUES
+(1, 3, '2024-06-06 09:34:50', 'manager_id', '17', '18'),
+(2, 50, '2024-06-10 05:34:26', 'is_paid', 'false', 'true'),
+(3, 27, '2024-06-14 07:43:48', 'manager_id', '7', '18'),
+(4, 1, '2024-06-15 19:42:04', 'total_sum', '57524', '62676'),
+(5, 29, '2024-06-16 18:17:32', 'status_id', '1', '3'),
+(6, 5, '2024-06-18 23:18:12', 'is_paid', 'false', 'true'),
+(7, 38, '2024-06-21 01:08:25', 'total_sum', '78387', '67258'),
+(8, 34, '2024-06-21 15:49:07', 'manager_id', '17', '17'),
+(9, 7, '2024-06-22 11:02:44', 'is_paid', 'false', 'true'),
+(10, 2, '2024-06-25 02:54:46', 'is_paid', 'false', 'true'),
+(11, 29, '2024-06-27 19:39:36', 'is_paid', 'false', 'true'),
+(12, 35, '2024-07-03 02:01:15', 'manager_id', '13', '3'),
+(13, 35, '2024-07-04 10:56:00', 'status_id', '1', '3'),
+(14, 6, '2024-07-06 03:17:46', 'manager_id', '4', '17'),
+(15, 34, '2024-07-12 02:36:48', 'manager_id', '17', '19'),
+(16, 55, '2024-07-14 10:23:58', 'status_id', '1', '6'),
+(17, 38, '2024-07-18 16:10:05', 'is_paid', 'false', 'true'),
+(18, 16, '2024-07-20 00:56:28', 'manager_id', '3', '2'),
+(19, 42, '2024-07-21 06:14:57', 'status_id', '1', '2'),
+(20, 34, '2024-07-22 14:29:44', 'is_paid', 'false', 'true'),
+(21, 37, '2024-07-23 01:05:36', 'total_sum', '49155', '70706'),
+(22, 11, '2024-07-27 09:04:41', 'is_paid', 'false', 'true'),
+(23, 8, '2024-08-02 04:25:03', 'manager_id', '8', '4'),
+(24, 29, '2024-08-03 19:08:49', 'status_id', '3', '4'),
+(25, 16, '2024-08-08 09:00:53', 'status_id', '1', '2'),
+(26, 4, '2024-08-13 12:35:31', 'total_sum', '53749', '40439'),
+(27, 54, '2024-08-16 15:56:16', 'is_paid', 'false', 'true'),
+(28, 2, '2024-08-18 05:19:10', 'status_id', '1', '3'),
+(29, 53, '2024-08-20 16:31:54', 'manager_id', '14', '15'),
+(30, 51, '2024-08-20 18:34:50', 'is_paid', 'false', 'true'),
+(31, 1, '2024-08-26 13:39:59', 'status_id', '1', '3'),
+(32, 23, '2024-08-29 13:20:47', 'is_paid', 'false', 'true'),
+(33, 10, '2024-08-31 18:50:36', 'is_paid', 'false', 'true'),
+(34, 52, '2024-08-31 19:45:46', 'total_sum', '56709', '74699'),
+(35, 51, '2024-09-04 05:25:00', 'manager_id', '18', '19'),
+(36, 11, '2024-09-05 16:28:03', 'total_sum', '72914', '37892'),
+(37, 51, '2024-09-06 21:03:11', 'manager_id', '19', '20'),
+(38, 17, '2024-09-08 10:18:07', 'manager_id', '11', '19'),
+(39, 5, '2024-09-11 19:40:45', 'manager_id', '8', '4'),
+(40, 18, '2024-09-11 23:14:32', 'total_sum', '50279', '99959'),
+(41, 27, '2024-09-15 14:45:15', 'status_id', '1', '3'),
+(42, 46, '2024-09-20 14:51:24', 'is_paid', 'false', 'true'),
+(43, 57, '2024-09-23 15:13:12', 'status_id', '1', '2'),
+(44, 53, '2024-09-24 21:43:59', 'manager_id', '15', '14'),
+(45, 56, '2024-09-26 15:43:52', 'is_paid', 'false', 'true'),
+(46, 40, '2024-10-02 14:47:53', 'is_paid', 'false', 'true'),
+(47, 15, '2024-10-07 15:13:34', 'is_paid', 'false', 'true'),
+(48, 7, '2024-10-12 23:35:34', 'status_id', '1', '6'),
+(49, 38, '2024-10-18 04:14:05', 'total_sum', '67258', '58237'),
+(50, 54, '2024-10-22 17:01:24', 'status_id', '1', '7'),
+(51, 19, '2024-10-22 18:11:48', 'is_paid', 'false', 'true'),
+(52, 15, '2024-10-26 18:47:17', 'manager_id', '12', '7'),
+(53, 51, '2024-10-30 16:23:21', 'manager_id', '20', '14'),
+(54, 39, '2024-11-02 13:23:41', 'manager_id', '6', '17'),
+(55, 16, '2024-11-07 15:36:00', 'status_id', '2', '6'),
+(56, 11, '2024-11-13 09:16:08', 'manager_id', '13', '19'),
+(57, 22, '2024-11-16 20:22:49', 'status_id', '1', '2'),
+(58, 5, '2024-11-20 12:08:44', 'total_sum', '7528', '5081'),
+(59, 24, '2024-11-22 04:58:50', 'is_paid', 'false', 'true'),
+(60, 48, '2024-11-27 13:06:41', 'status_id', '1', '3'),
+(61, 1, '2024-11-29 19:21:51', 'is_paid', 'false', 'true'),
+(62, 55, '2024-12-05 08:17:50', 'is_paid', 'false', 'true'),
+(63, 48, '2024-12-07 02:55:01', 'manager_id', '17', '7'),
+(64, 27, '2024-12-11 16:34:46', 'manager_id', '18', '18'),
+(65, 17, '2024-12-15 19:57:30', 'status_id', '1', '5'),
+(66, 22, '2024-12-17 20:10:30', 'is_paid', 'false', 'true'),
+(67, 33, '2024-12-22 01:12:14', 'is_paid', 'false', 'true'),
+(68, 2, '2024-12-24 04:05:28', 'total_sum', '22668', '12929'),
+(69, 14, '2024-12-27 06:46:55', 'status_id', '1', '2'),
+(70, 30, '2025-01-01 21:09:40', 'manager_id', '3', '18'),
+(71, 40, '2025-01-03 13:23:30', 'status_id', '1', '5'),
+(72, 60, '2025-01-04 00:17:38', 'status_id', '1', '6'),
+(73, 15, '2025-01-05 18:54:07', 'manager_id', '7', '2'),
+(74, 40, '2025-01-08 12:29:51', 'manager_id', '19', '16'),
+(75, 23, '2025-01-13 00:09:44', 'total_sum', '29558', '48889'),
+(76, 49, '2025-01-17 02:09:44', 'is_paid', 'false', 'true'),
+(77, 11, '2025-01-20 22:01:06', 'status_id', '1', '3'),
+(78, 49, '2025-01-23 00:43:56', 'manager_id', '17', '20'),
+(79, 26, '2025-01-25 18:57:21', 'status_id', '1', '3'),
+(80, 30, '2025-01-31 13:59:09', 'status_id', '1', '3'),
+(81, 8, '2025-02-05 14:54:41', 'total_sum', '88736', '43146'),
+(82, 39, '2025-02-09 21:08:37', 'status_id', '1', '2'),
+(83, 6, '2025-02-11 03:48:53', 'status_id', '1', '4'),
+(84, 45, '2025-02-14 13:23:42', 'is_paid', 'false', 'true'),
+(85, 18, '2025-02-19 02:33:48', 'total_sum', '99959', '48627'),
+(86, 13, '2025-02-20 22:02:51', 'total_sum', '92930', '82969'),
+(87, 19, '2025-02-24 21:28:43', 'status_id', '1', '7'),
+(88, 36, '2025-02-26 08:18:53', 'is_paid', 'false', 'true'),
+(89, 30, '2025-02-28 18:58:30', 'total_sum', '8174', '28146'),
+(90, 58, '2025-03-01 18:58:30', 'is_paid', 'false', 'true'),
+(91, 53, '2025-03-03 22:13:03', 'is_paid', 'false', 'true'),
+(92, 37, '2025-03-07 14:24:45', 'status_id', '1', '6'),
+(93, 31, '2025-03-07 21:04:01', 'status_id', '1', '5'),
+(94, 9, '2025-03-09 16:49:59', 'manager_id', '5', '4'),
+(95, 4, '2025-03-13 18:53:34', 'is_paid', 'false', 'true'),
+(96, 33, '2025-03-13 22:47:08', 'status_id', '1', '5'),
+(97, 53, '2025-03-17 10:33:48', 'status_id', '1', '3'),
+(98, 11, '2025-03-17 21:04:41', 'status_id', '3', '6'),
+(99, 34, '2025-03-20 18:01:22', 'status_id', '1', '3'),
+(100, 41, '2025-03-23 16:40:43', 'total_sum', '40613', '67867'),
+(101, 22, '2025-03-24 03:52:21', 'status_id', '2', '4'),
+(102, 39, '2025-03-27 18:39:43', 'is_paid', 'false', 'true'),
+(103, 44, '2025-04-01 14:10:29', 'total_sum', '28805', '59574'),
+(104, 46, '2025-04-01 19:14:55', 'total_sum', '63568', '71926'),
+(105, 57, '2025-04-02 05:37:38', 'is_paid', 'false', 'true'),
+(106, 55, '2025-04-04 07:20:45', 'status_id', '6', '7'),
+(107, 20, '2025-04-05 12:51:44', 'total_sum', '12839', '36622'),
+(108, 39, '2025-04-09 00:48:59', 'total_sum', '42816', '37671'),
+(109, 48, '2025-04-12 22:35:31', 'manager_id', '7', '5'),
+(110, 36, '2025-04-16 09:55:31', 'total_sum', '39014', '26004'),
+(111, 18, '2025-04-17 02:50:35', 'manager_id', '19', '5'),
+(112, 8, '2025-04-20 01:28:32', 'is_paid', 'false', 'true'),
+(113, 11, '2025-04-22 17:17:48', 'total_sum', '37892', '7466'),
+(114, 58, '2025-04-24 06:35:02', 'total_sum', '91847', '36330'),
+(115, 4, '2025-04-25 00:26:43', 'manager_id', '15', '2'),
+(116, 27, '2025-04-30 11:49:03', 'total_sum', '81686', '98993'),
+(117, 45, '2025-05-06 04:57:44', 'status_id', '1', '3'),
+(118, 48, '2025-05-06 14:11:31', 'status_id', '3', '4'),
+(119, 26, '2025-05-07 10:24:33', 'total_sum', '83454', '63289'),
+(120, 4, '2025-05-07 23:22:27', 'total_sum', '40439', '57328'),
+(121, 47, '2025-05-13 13:03:04', 'status_id', '1', '4'),
+(122, 56, '2025-05-15 02:58:23', 'total_sum', '98055', '88390'),
+(123, 31, '2025-05-19 17:57:45', 'manager_id', '3', '3'),
+(124, 27, '2025-05-25 02:31:12', 'total_sum', '98993', '53757'),
+(125, 50, '2025-05-28 14:28:31', 'total_sum', '88142', '212'),
+(126, 9, '2025-06-02 15:40:07', 'status_id', '1', '5'),
+(127, 56, '2025-06-02 17:00:34', 'status_id', '1', '7'),
+(128, 42, '2025-06-03 20:03:45', 'total_sum', '31229', '85565'),
+(129, 31, '2025-06-07 11:27:28', 'status_id', '5', '6'),
+(130, 56, '2025-06-07 23:07:46', 'total_sum', '88390', '35471'),
+(131, 13, '2025-06-09 22:11:45', 'is_paid', 'false', 'true'),
+(132, 27, '2025-06-13 23:42:45', 'status_id', '3', '5'),
+(133, 7, '2025-06-15 21:42:53', 'total_sum', '32699', '94691'),
+(134, 5, '2025-06-20 15:42:34', 'status_id', '1', '4'),
+(135, 46, '2025-06-21 07:20:09', 'total_sum', '71926', '61551'),
+(136, 57, '2025-06-25 09:31:57', 'status_id', '2', '3'),
+(137, 27, '2025-06-26 08:36:12', 'total_sum', '53757', '39897'),
+(138, 36, '2025-07-01 23:02:08', 'status_id', '1', '4'),
+(139, 51, '2025-07-07 09:59:21', 'total_sum', '58795', '14753'),
+(140, 27, '2025-07-09 07:54:46', 'status_id', '5', '6'),
+(141, 55, '2025-07-09 14:43:19', 'total_sum', '42796', '73853'),
+(142, 7, '2025-07-14 00:25:18', 'status_id', '6', '7'),
+(143, 4, '2025-07-17 09:25:57', 'status_id', '1', '2'),
+(144, 42, '2025-07-22 10:33:31', 'total_sum', '85565', '17217'),
+(145, 58, '2025-07-24 14:48:49', 'status_id', '1', '6'),
+(146, 50, '2025-07-30 00:03:50', 'manager_id', '12', '6'),
+(147, 8, '2025-07-31 13:19:29', 'manager_id', '4', '20'),
+(148, 16, '2025-08-02 13:45:20', 'manager_id', '2', '10'),
+(149, 28, '2025-08-02 23:56:22', 'manager_id', '11', '12'),
+(150, 10, '2025-08-03 05:14:12', 'status_id', '1', '3'),
+(151, 8, '2025-08-06 01:24:36', 'total_sum', '43146', '12995'),
+(152, 19, '2025-08-11 15:52:36', 'total_sum', '46534', '11724'),
+(153, 36, '2025-08-13 12:18:46', 'total_sum', '26004', '91278'),
+(154, 39, '2025-08-18 12:48:14', 'status_id', '2', '7'),
+(155, 33, '2025-08-18 13:34:04', 'manager_id', '20', '10'),
+(156, 37, '2025-08-21 06:26:01', 'total_sum', '70706', '20381'),
+(157, 52, '2025-08-22 00:08:39', 'status_id', '1', '6'),
+(158, 31, '2025-08-23 12:42:56', 'manager_id', '3', '11'),
+(159, 36, '2025-08-24 13:45:27', 'manager_id', '6', '18'),
+(160, 17, '2025-08-29 13:29:53', 'status_id', '5', '6'),
+(161, 9, '2025-09-01 05:07:20', 'is_paid', 'false', 'true'),
+(162, 50, '2025-09-04 16:06:50', 'status_id', '1', '7'),
+(163, 12, '2025-09-05 03:16:50', 'is_paid', 'false', 'true'),
+(164, 45, '2025-09-07 12:52:10', 'status_id', '3', '6'),
+(165, 6, '2025-09-09 12:36:30', 'is_paid', 'false', 'true'),
+(166, 30, '2025-09-09 22:58:44', 'is_paid', 'false', 'true'),
+(167, 53, '2025-09-10 11:57:43', 'status_id', '3', '5'),
+(168, 19, '2025-09-11 22:48:39', 'total_sum', '11724', '65095'),
+(169, 5, '2025-09-16 21:50:08', 'total_sum', '5081', '39655'),
+(170, 41, '2025-09-22 06:16:42', 'is_paid', 'false', 'true'),
+(171, 46, '2025-09-24 19:23:55', 'total_sum', '61551', '78084'),
+(172, 34, '2025-09-30 10:37:19', 'status_id', '3', '6'),
+(173, 43, '2025-09-30 14:48:02', 'manager_id', '14', '2'),
+(174, 38, '2025-10-06 12:11:48', 'total_sum', '58237', '13455'),
+(175, 32, '2025-10-08 15:36:45', 'total_sum', '35835', '21613'),
+(176, 44, '2025-10-09 04:38:56', 'total_sum', '59574', '72642'),
+(177, 54, '2025-10-14 07:11:44', 'total_sum', '40529', '90520'),
+(178, 6, '2025-10-18 00:22:29', 'manager_id', '17', '6'),
+(179, 25, '2025-10-20 21:56:29', 'is_paid', 'false', 'true'),
+(180, 18, '2025-10-24 15:20:13', 'total_sum', '48627', '32693'),
+(181, 22, '2025-10-25 18:29:51', 'manager_id', '14', '11'),
+(182, 50, '2025-10-31 04:57:40', 'manager_id', '6', '18'),
+(183, 9, '2025-11-03 04:15:05', 'manager_id', '4', '13'),
+(184, 15, '2025-11-05 23:13:13', 'total_sum', '5473', '88372'),
+(185, 11, '2025-11-07 16:49:29', 'manager_id', '19', '2'),
+(186, 58, '2025-11-09 16:38:33', 'total_sum', '36330', '84110'),
+(187, 16, '2025-11-12 02:55:44', 'manager_id', '10', '18'),
+(188, 28, '2025-11-15 20:19:04', 'is_paid', 'false', 'true'),
+(189, 60, '2025-11-21 03:57:16', 'manager_id', '3', '6'),
+(190, 59, '2025-11-26 02:06:48', 'total_sum', '37522', '74718'),
+(191, 19, '2025-11-26 11:52:38', 'manager_id', '20', '11'),
+(192, 48, '2025-11-27 10:55:31', 'is_paid', 'false', 'true'),
+(193, 11, '2025-12-02 22:17:14', 'manager_id', '2', '18'),
+(194, 56, '2025-12-03 23:47:45', 'manager_id', '10', '6'),
+(195, 58, '2025-12-06 20:30:39', 'status_id', '6', '7'),
+(196, 31, '2025-12-11 17:12:48', 'total_sum', '36038', '60033'),
+(197, 30, '2025-12-12 08:20:14', 'manager_id', '18', '1'),
+(198, 58, '2025-12-15 16:50:25', 'manager_id', '10', '14'),
+(199, 22, '2025-12-19 13:27:46', 'status_id', '4', '6'),
+(200, 32, '2025-12-23 15:32:56', 'manager_id', '9', '9'),
+(201, 21, '2025-12-29 05:51:49', 'manager_id', '8', '3'),
+(202, 40, '2026-01-02 21:17:46', 'manager_id', '16', '8'),
+(203, 44, '2026-01-05 01:50:35', 'is_paid', 'false', 'true'),
+(204, 26, '2026-01-09 11:47:06', 'manager_id', '14', '5'),
+(205, 20, '2026-01-14 12:54:45', 'manager_id', '13', '4'),
+(206, 10, '2026-01-18 17:42:39', 'status_id', '3', '7'),
+(207, 42, '2026-01-21 10:40:34', 'status_id', '2', '3'),
+(208, 49, '2026-01-23 11:03:23', 'total_sum', '34153', '1844'),
+(209, 37, '2026-01-28 05:05:19', 'total_sum', '20381', '33622'),
+(210, 34, '2026-02-03 02:50:20', 'total_sum', '53182', '12768'),
+(211, 46, '2026-02-03 04:15:30', 'manager_id', '20', '16'),
+(212, 36, '2026-02-07 06:16:43', 'total_sum', '91278', '1612'),
+(213, 14, '2026-02-09 05:14:07', 'is_paid', 'false', 'true'),
+(214, 24, '2026-02-11 01:50:32', 'status_id', '1', '7'),
+(215, 25, '2026-02-13 01:49:28', 'total_sum', '93988', '45469'),
+(216, 43, '2026-02-14 14:07:45', 'total_sum', '91713', '52565'),
+(217, 26, '2026-02-17 23:32:21', 'manager_id', '5', '15'),
+(218, 23, '2026-02-23 09:42:17', 'status_id', '1', '6'),
+(219, 19, '2026-03-01 09:03:28', 'manager_id', '11', '8'),
+(220, 11, '2026-03-02 09:46:15', 'status_id', '6', '7'),
+(221, 35, '2026-03-04 22:04:35', 'total_sum', '71627', '80765'),
+(222, 12, '2026-03-04 23:02:42', 'manager_id', '9', '6'),
+(223, 34, '2026-03-06 21:21:56', 'total_sum', '12768', '24560'),
+(224, 59, '2026-03-09 01:06:42', 'is_paid', 'false', 'true'),
+(225, 36, '2026-03-10 07:51:41', 'status_id', '4', '5'),
+(226, 27, '2026-03-12 23:37:28', 'total_sum', '39897', '13845'),
+(227, 28, '2026-03-17 11:16:34', 'status_id', '1', '7'),
+(228, 8, '2026-03-21 01:25:59', 'manager_id', '20', '17'),
+(229, 43, '2026-03-21 20:45:44', 'is_paid', 'false', 'true'),
+(230, 35, '2026-03-27 05:06:06', 'manager_id', '3', '20'),
+(231, 14, '2026-03-29 19:24:57', 'total_sum', '47783', '8511'),
+(232, 56, '2026-04-04 20:02:57', 'total_sum', '35471', '49679'),
+(233, 18, '2026-04-06 12:40:27', 'manager_id', '5', '12'),
+(234, 24, '2026-04-09 10:03:42', 'manager_id', '6', '8'),
+(235, 48, '2026-04-15 07:50:40', 'total_sum', '65677', '83681'),
+(236, 33, '2026-04-19 15:12:33', 'total_sum', '43671', '14230'),
+(237, 10, '2026-04-24 21:14:26', 'manager_id', '3', '7'),
+(238, 35, '2026-04-29 03:30:53', 'manager_id', '20', '20'),
+(239, 46, '2026-05-01 04:07:13', 'status_id', '1', '4'),
+(240, 3, '2026-05-01 20:41:06', 'status_id', '1', '3');
+
+
+INSERT INTO public.customer_visit (id,customer_id,created_at,visit_length,landing_page,exit_page,utm_source)
+VALUES
+  (1,1,'2019-06-09 10:58:26',75,'http://naver.com/sub','https://nytimes.com/en-us','autem'),
+  (2,4,'2019-06-23 02:05:21',82,'https://whatsapp.com/sub/cars','https://zoom.us/site','ipsam'),
+  (3,7,'2019-09-22 00:15:19',57,'http://nytimes.com/settings','https://nytimes.com/one','esse'),
+  (4,5,'2020-01-02 13:37:26',63,'http://pinterest.com/en-ca','http://reddit.com/sub','esse'),
+  (5,4,'2020-07-04 01:04:32',60,'https://zoom.us/settings','https://facebook.com/one','necessitatibus'),
+  (6,7,'2020-09-03 09:38:27',70,'http://pinterest.com/en-us','https://baidu.com/sub','sed'),
+  (7,7,'2020-11-07 08:49:32',64,'http://walmart.com/fr','https://facebook.com/settings','quibusdam'),
+  (8,4,'2021-09-06 17:21:01',80,'https://twitter.com/sub','http://google.com/one','amet'),
+  (9,4,'2021-10-24 06:09:28',59,'https://whatsapp.com/fr','https://pinterest.com/fr','autem'),
+  (10,4,'2022-01-19 21:58:11',95,'https://nytimes.com/user/110','http://youtube.com/one','minima'),
+  (11,3,'2022-03-06 20:46:13',65,'http://cnn.com/user/110','https://naver.com/fr','nam'),
+  (12,6,'2022-05-17 04:26:50',78,'https://walmart.com/en-ca','https://netflix.com/group/9','sunt'),
+  (13,3,'2022-06-13 06:30:11',78,'http://guardian.co.uk/fr','https://whatsapp.com/group/9','tempora'),
+  (14,6,'2023-01-13 22:39:22',67,'http://yahoo.com/group/9','https://naver.com/fr','sed'),
+  (15,7,'2023-02-04 21:01:05',93,'https://reddit.com/sub','http://nytimes.com/one','amet'),
+  (16,2,'2023-02-18 20:31:38',69,'http://guardian.co.uk/fr','https://facebook.com/site','consequatur'),
+  (17,2,'2023-09-05 11:40:16',80,'https://nytimes.com/sub','http://whatsapp.com/settings','necessitatibus'),
+  (18,5,'2023-09-11 22:53:36',79,'http://nytimes.com/sub/cars','http://google.com/one','quibusdam'),
+  (19,4,'2023-10-29 22:22:35',83,'http://twitter.com/settings','https://nytimes.com/one','eos'),
+  (20,1,'2024-02-02 09:24:14',54,'https://youtube.com/fr','http://youtube.com/en-us','ipsam');
+  
+  
+  INSERT INTO public.customer_visit_page (id,visit_id,page,time_on_page)
+VALUES
+  (1,10,'http://zoom.us/user/110',7),
+  (2,16,'https://facebook.com/settings',13),
+  (3,14,'https://zoom.us/one',12),
+  (4,5,'http://bbc.co.uk/en-us',14),
+  (5,17,'https://pinterest.com/group/9',13),
+  (6,3,'http://instagram.com/sub/cars',7),
+  (7,12,'https://pinterest.com/en-us',12),
+  (8,2,'https://guardian.co.uk/one',12),
+  (9,17,'https://youtube.com/site',14),
+  (10,16,'http://instagram.com/user/110',13),
+  (11,5,'https://netflix.com/group/9',6),
+  (12,16,'https://bbc.co.uk/en-ca',12),
+  (13,4,'https://reddit.com/en-ca',6),
+  (14,10,'http://cnn.com/one',12),
+  (15,3,'http://pinterest.com/sub/cars',9),
+  (16,6,'https://netflix.com/en-us',15),
+  (17,6,'http://wikipedia.org/user/110',12),
+  (18,18,'https://guardian.co.uk/sub/cars',11),
+  (19,16,'https://netflix.com/one',9),
+  (20,14,'https://cnn.com/site',14),
+  (21,3,'https://nytimes.com/group/9',13),
+  (22,8,'https://zoom.us/sub',10),
+  (23,16,'https://bbc.co.uk/settings',9),
+  (24,3,'https://twitter.com/group/9',6),
+  (25,12,'https://reddit.com/en-us',11),
+  (26,10,'http://zoom.us/en-ca',9),
+  (27,15,'http://zoom.us/en-us',15),
+  (28,17,'https://zoom.us/sub/cars',6),
+  (29,18,'http://bbc.co.uk/en-ca',15),
+  (30,16,'https://reddit.com/fr',10),
+  (31,3,'https://zoom.us/one',8),
+  (32,10,'https://google.com/site',10),
+  (33,12,'http://pinterest.com/en-ca',11),
+  (34,17,'https://facebook.com/one',13),
+  (35,6,'http://google.com/sub',12),
+  (36,12,'https://guardian.co.uk/group/9',13),
+  (37,7,'https://instagram.com/sub',13),
+  (38,12,'http://google.com/sub/cars',12),
+  (39,13,'https://bbc.co.uk/user/110',14),
+  (40,19,'https://yahoo.com/settings',9),
+  (41,3,'https://nytimes.com/group/9',13),
+  (42,8,'https://zoom.us/sub',10),
+  (43,16,'https://bbc.co.uk/settings',9),
+  (44,3,'https://twitter.com/group/9',6),
+  (45,12,'https://reddit.com/en-us',11),
+  (46,10,'http://zoom.us/en-ca',9),
+  (47,15,'http://zoom.us/en-us',15),
+  (48,17,'https://zoom.us/sub/cars',6),
+  (49,18,'http://bbc.co.uk/en-ca',15),
+  (50,16,'https://reddit.com/fr',10),
+  (51,3,'https://zoom.us/one',8),
+  (52,10,'https://google.com/site',10),
+  (53,12,'http://pinterest.com/en-ca',11),
+  (54,17,'https://facebook.com/one',13),
+  (55,6,'http://google.com/sub',12),
+  (56,12,'https://guardian.co.uk/group/9',13),
+  (57,7,'https://instagram.com/sub',13),
+  (58,12,'http://google.com/sub/cars',12),
+  (59,13,'https://bbc.co.uk/user/110',14),
+  (60,19,'https://yahoo.com/settings',9),
+  (61,3,'https://nytimes.com/group/9',13),
+  (62,8,'https://zoom.us/sub',10),
+  (63,16,'https://bbc.co.uk/settings',9),
+  (64,3,'https://twitter.com/group/9',6),
+  (65,12,'https://reddit.com/en-us',11),
+  (66,10,'http://zoom.us/en-ca',9),
+  (67,15,'http://zoom.us/en-us',15),
+  (68,17,'https://zoom.us/sub/cars',6),
+  (69,18,'http://bbc.co.uk/en-ca',15),
+  (70,16,'https://reddit.com/fr',10),
+  (71,3,'https://zoom.us/one',8),
+  (72,10,'https://google.com/site',10),
+  (73,12,'http://pinterest.com/en-ca',11),
+  (74,17,'https://facebook.com/one',13),
+  (75,6,'http://google.com/sub',12),
+  (76,12,'https://guardian.co.uk/group/9',13),
+  (77,7,'https://instagram.com/sub',13),
+  (78,12,'http://google.com/sub/cars',12),
+  (79,13,'https://bbc.co.uk/user/110',14),
+  (80,19,'https://yahoo.com/settings',9),
+  (81,3,'https://nytimes.com/group/9',13),
+  (82,8,'https://zoom.us/sub',10),
+  (83,16,'https://bbc.co.uk/settings',9),
+  (84,3,'https://twitter.com/group/9',6),
+  (85,12,'https://reddit.com/en-us',11),
+  (86,10,'http://zoom.us/en-ca',9),
+  (87,15,'http://zoom.us/en-us',15),
+  (88,17,'https://zoom.us/sub/cars',6),
+  (89,18,'http://bbc.co.uk/en-ca',15),
+  (90,16,'https://reddit.com/fr',10),
+  (91,3,'https://zoom.us/one',8),
+  (92,10,'https://google.com/site',10),
+  (93,12,'http://pinterest.com/en-ca',11),
+  (94,17,'https://facebook.com/one',13),
+  (95,6,'http://google.com/sub',12),
+  (96,12,'https://guardian.co.uk/group/9',13),
+  (97,7,'https://instagram.com/sub',13),
+  (98,12,'http://google.com/sub/cars',12),
+  (99,13,'https://bbc.co.uk/user/110',14),
+  (100,19,'https://yahoo.com/settings',9);
+  
+  
+   -- Статус заказа | Среднее время пребывания заказа в этом статусе
+ 
+WITH epochs AS
+(
+           SELECT     s.NAME                                                                                                                                                      AS status,
+                      Abs( COALESCE( Extract( epoch FROM COALESCE( Lead(oh.created_at) OVER ( partition BY oh.order_id ORDER BY oh.created_at ), Now() ) - oh.created_at ), 0 ) ) AS epochs
+           FROM       order_history oh
+           INNER JOIN status s
+           ON         s.id = oh.new_value :: int
+           WHERE      oh.field_name = 'status_id' )
+SELECT   e.status                AS status,
+         Round(Avg(e.epochs), 2) AS avg
+FROM     epochs e
+GROUP BY e.status;
+
+-------------------------------------------------------------------------------------------------------
+-- ID клиента | Дата последнего визита
+
+SELECT   cv.customer_id     AS customer_id,
+         Max(cv.created_at) AS last_visit
+FROM     customer_visit     AS cv
+GROUP BY customer_id
+ORDER BY last_visit ASC;
+
+-- ID клиента | Среднее количество просмотров страниц за визит
+
+WITH visit_count AS
+(
+           SELECT     cv.customer_id      AS customer_id,
+                      cvp.visit_id        AS visit_id,
+                      Count(cvp.id)       AS pages_count_per_visit
+           FROM       customer_visit_page AS cvp
+           INNER JOIN customer_visit      AS cv
+           ON         cv.id = cvp.visit_id
+           GROUP BY   customer_id,
+                      visit_id )
+SELECT   customer_id,
+         Round(Avg(pages_count_per_visit), 2) AS avg_pages_per_visit
+FROM     visit_count
+GROUP BY customer_id;
+
+-- ID клиента | Адреса страниц с визитами дольше среднего времени визита этого клиента
+
+WITH avg_time_on_pages AS
+(
+           SELECT     cv.customer_id        AS customer_id,
+                      cvp.visit_id          AS visit_id,
+                      Avg(cvp.time_on_page) AS avg_time_on_page
+           FROM       customer_visit_page   AS cvp
+           INNER JOIN customer_visit        AS cv
+           ON         cv.id = cvp.visit_id
+           GROUP BY   customer_id,
+                      visit_id )
+SELECT     atp.customer_id     AS customer_id,
+           cvp.page            AS page
+FROM       avg_time_on_pages   AS atp
+INNER JOIN customer_visit_page AS cvp
+ON         cvp.visit_id = atp.visit_id
+WHERE      cvp.time_on_page > atp.avg_time_on_page
+ORDER BY   customer_id;
+
+-------------------------------------------------------------------------------------------------------
+-- ID клиента | Среднее время между заказами
+
+WITH report AS
+(
+         SELECT   o.customer_id                                                                                                         AS customer_id,
+                  Extract( epoch FROM Lag(o.created_at) OVER ( partition BY o.customer_id ORDER BY o.created_at DESC ) - o.created_at ) AS epochs
+         FROM     "order" o )
+SELECT    c.id                                 AS customer_id,
+          Round(COALESCE(Avg(r.epochs), 0), 2) AS average
+FROM      customer c
+LEFT JOIN report r
+ON        r.customer_id = c.id
+GROUP BY  c.id
+ORDER BY  c.id;
+
+-- ID клиента | Количество визитов | Количество заказов
+
+WITH visits AS
+(
+           SELECT     cv.customer_id      AS customer_id,
+                      Count(cvp.visit_id) AS COUNT
+           FROM       customer_visit cv
+           INNER JOIN customer_visit_page cvp
+           ON         cv.id = cvp.visit_id
+           GROUP BY   cv.customer_id ), orders AS
+(
+         SELECT   o.customer_id AS customer_id,
+                  Count(o.id)   AS COUNT
+         FROM     "order" o
+         GROUP BY o.customer_id )
+SELECT    c.id    AS customer_id,
+          v.count AS visits,
+          o.count AS orders
+FROM      customer c
+LEFT JOIN orders o
+ON        o.customer_id = c.id
+LEFT JOIN visits v
+ON        v.customer_id = c.id
+ORDER BY  c.id;
+
+-- Источник трафика | Количество визитов с этим источником | Количество созданных заказов | Количество оплаченных(принятых) заказов | Количество выполненных заказов
+
+WITH visits AS
+(
+           SELECT     cv.utm_source       AS utm_source,
+                      Count(cvp.visit_id) AS visits
+           FROM       customer_visit cv
+           INNER JOIN customer_visit_page cvp
+           ON         cv.id = cvp.visit_id
+           GROUP BY   cv.utm_source ), orders AS
+(
+         SELECT   o.utm_source AS utm_source,
+                  Count(o.id)  AS count_orders
+         FROM     "order" o
+         GROUP BY o.utm_source ), payed AS
+(
+         SELECT   o.utm_source AS utm_source,
+                  Count(o.id)  AS count_orders
+         FROM     "order" o
+         WHERE    o.status_id = 3
+         GROUP BY o.utm_source ), completed AS
+(
+         SELECT   o.utm_source AS utm_source,
+                  Count(o.id)  AS count_orders
+         FROM     "order" o
+         WHERE    o.status_id = 7
+         GROUP BY o.utm_source )
+SELECT    COALESCE(o.utm_source, v.utm_source) AS utm_source,
+          COALESCE(v.visits, 0)                AS visits_count,
+          COALESCE(o.count_orders, 0)          AS count_orders,
+          COALESCE(p.count_orders, 0)          AS payed_count,
+          COALESCE(c.count_orders, 0)          AS completed_count
+FROM      visits v
+LEFT JOIN orders o
+ON        v.utm_source = o.utm_source
+LEFT JOIN payed p
+ON        (
+                    p.utm_source = o.utm_source)
+LEFT JOIN completed c
+ON        c.utm_source = o.utm_source;
+
+-- 3.3 ID менеджера | Среднее время выполнения заказов | Доля отмененных заказов | Сумма выполненных заказов | Средняя стоимость заказа
+
+WITH completed AS
+(
+                SELECT DISTINCT o.id                                                                                                                                             AS order_id,
+                                Extract( epoch FROM Last_value(coh.created_at) OVER (partition BY coh.order_id) - First_value(coh.created_at) OVER (partition BY coh.order_id) ) AS epochs,
+                                o.total_sum                                                                                                                                      AS total_sum
+                FROM            "order" o
+                INNER JOIN      order_history coh
+                ON              o.id = coh.order_id
+                WHERE           o.status_id = 1 ), uncompleted AS
+(
+           SELECT     o.id AS id
+           FROM       "order" o
+           INNER JOIN status cs
+           ON         cs.id = o.status_id
+           AND        status_id = 10 )
+SELECT    o.manager_id                                  AS manager_id,
+          COALESCE( Avg(c.epochs), 0 )                  AS avg_completed_time,
+          Round(Count(u.id), 2) / Round(Count(o.id), 2) AS fraction,
+          Round( COALESCE( Sum(c.total_sum), 0 ), 2 )   AS completed_sum,
+          Round(Avg(o.total_sum), 2)                    AS average_cost
+FROM      "order" o
+LEFT JOIN completed c
+ON        o.id = c.order_id
+LEFT JOIN uncompleted u
+ON        u.id = o.id
+GROUP BY  o.manager_id
+ORDER BY  o.manager_id;
+
+-- 3.3 ID менеджера | Рейтинг менеджера
+
+WITH managers AS
+(
+                SELECT DISTINCT o.manager_id AS manager_id
+                FROM            "order" o
+                ORDER BY        o.manager_id ), orders AS
+(
+       SELECT o.id         AS order_id,
+              o.manager_id AS manager_id
+       FROM   "order" o ), completed AS
+(
+       SELECT o.id         AS order_id,
+              o.manager_id AS manager_id
+       FROM   "order" o
+       WHERE  o.status_id = 7 ), canceled AS
+(
+       SELECT o.id         AS order_id,
+              o.manager_id AS manager_id
+       FROM   "order" o
+       WHERE  o.status_id = 6 ), complete_time AS
+(
+                SELECT DISTINCT o.manager_id                                                                                                                                     AS manager_id,
+                                Extract( epoch FROM Last_value(coh.created_at) OVER (partition BY coh.order_id) - First_value(coh.created_at) OVER (partition BY coh.order_id) ) AS epochs,
+                                o.total_sum                                                                                                                                      AS total_sum
+                FROM            "order" o
+                INNER JOIN      order_history coh
+                ON              o.id = coh.order_id
+                WHERE           o.status_id = 7 ), report AS
+(
+                SELECT DISTINCT m.manager_id                                                                                                         AS manager_id,
+                                COALESCE(count(c.order_id) OVER w, 0) ::  numeric(11, 2) - COALESCE(count(c.order_id) OVER (), 0) :: numeric(11, 2)  AS completed_count,
+                                COALESCE(avg(ct.epochs) OVER w, 0) ::     numeric(11, 2) - COALESCE(avg(ct.epochs) OVER (), 0) :: numeric(11, 2)     AS average_time,
+                                COALESCE(count(cn.order_id) OVER w, 0) :: numeric(11, 2) - COALESCE(count(cn.order_id) OVER (), 0) :: numeric(11, 2) AS canceled_count
+                FROM            managers m
+                INNER JOIN      orders o
+                ON              o.manager_id = m.manager_id
+                LEFT JOIN       completed c
+                ON              c.manager_id = m.manager_id
+                LEFT JOIN       canceled cn
+                ON              cn.manager_id = m.manager_id
+                LEFT JOIN       complete_time ct
+                ON              ct.manager_id = m.manager_id window w AS (partition BY m.manager_id) )
+SELECT r.manager_id,
+       ( r.completed_count + r.average_time + r.canceled_count ) AS rate
+FROM   report r; 
